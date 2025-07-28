@@ -14,10 +14,12 @@
 
   <!-- Navbar -->
 <nav class="flex items-center justify-between px-8 py-2 bg-white shadow sticky top-0 z-50">
+  <!-- Logo -->
   <a href="#" class="flex items-center">
     <img src="images/logo1.png" alt="JD Dance Logo" class="h-[120px] w-auto mr-4 rounded"/>
   </a>
-  <ul class="flex gap-8 items-center font-semibold">
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex gap-8 items-center font-semibold">
     <li><a href="#" class="hover:text-pink-500">Home</a></li>
     <li><a href="#classes" class="hover:text-pink-500">Classes</a></li>
     <li><a href="#about" class="hover:text-pink-500">About</a></li>
@@ -26,7 +28,40 @@
     <li><a href="#policies" class="hover:text-pink-500">Policies</a></li>
     <li><a href="#contact" class="hover:text-pink-500">Contact</a></li>
   </ul>
+  <!-- Hamburger (mobile only) -->
+  <button id="mobile-menu-button" class="md:hidden p-2 rounded text-gray-600 hover:bg-gray-100 focus:outline-none">
+    <svg class="h-10 w-10" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
 </nav>
+<!-- Mobile menu, toggled with JS -->
+<div class="md:hidden" id="mobile-menu" style="display:none;">
+  <ul class="px-8 pt-4 pb-6 space-y-2 font-semibold bg-white shadow">
+    <li><a href="#" class="block py-2 hover:text-pink-500">Home</a></li>
+    <li><a href="#classes" class="block py-2 hover:text-pink-500">Classes</a></li>
+    <li><a href="#about" class="block py-2 hover:text-pink-500">About</a></li>
+    <li><a href="#studio" class="block py-2 hover:text-pink-500">Hire The Studio</a></li>
+    <li><a href="#news" class="block py-2 hover:text-pink-500">News</a></li>
+    <li><a href="#policies" class="block py-2 hover:text-pink-500">Policies</a></li>
+    <li><a href="#contact" class="block py-2 hover:text-pink-500">Contact</a></li>
+  </ul>
+</div>
+<!-- Hamburger toggle script -->
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    if (menu.style.display === 'none' || menu.style.display === '') {
+      menu.style.display = 'block';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      menu.style.display = 'none';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
 
 <!-- Hero Section -->
 <section class="relative flex items-center justify-center h-[50vh] min-h-[300px]">
@@ -57,40 +92,41 @@
 <section class="bg-white pt-12 pb-8">
   <div class="flex flex-col md:flex-row gap-6 w-[98vw] max-w-[1800px] mx-auto px-2 md:px-6">
     <!-- Ballet -->
-    <div class="relative flex-1 min-w-0 h-[260px] md:h-[340px] rounded-xl overflow-hidden shadow-lg flex items-center">
+    <div class="relative flex-1 min-w-0 h-[340px] md:h-[340px] rounded-xl overflow-hidden shadow-lg flex items-center">
       <img src="images/ballet.png"
         alt="Ballet"
         class="absolute inset-0 w-full h-full object-cover"/>
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-      <div class="relative z-10 flex flex-col items-start justify-center h-full pl-12">
-        <h3 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow mb-1">Ballet</h3>
-        <span class="text-2xl font-light text-white">Grace and Precision</span>
+      <div class="relative z-10 flex flex-col items-center md:items-start justify-center h-full pl-0 md:pl-12 w-full">
+        <h3 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-1 text-center md:text-left">Ballet</h3>
+        <span class="text-xl md:text-2xl font-light text-white text-center md:text-left">Grace and Precision</span>
       </div>
     </div>
     <!-- Dance Academy -->
-    <div class="relative flex-1 min-w-0 h-[260px] md:h-[340px] rounded-xl overflow-hidden shadow-lg flex items-center">
+    <div class="relative flex-1 min-w-0 h-[340px] md:h-[340px] rounded-xl overflow-hidden shadow-lg flex items-center">
       <img src="images/danceacademy.png"
         alt="Dance Academy"
         class="absolute inset-0 w-full h-full object-cover"/>
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-      <div class="relative z-10 flex flex-col items-start justify-center h-full pl-12">
-        <h3 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow mb-1">Dance Academy</h3>
-        <span class="text-2xl font-light text-white">Energy and Passion</span>
+      <div class="relative z-10 flex flex-col items-center md:items-start justify-center h-full pl-0 md:pl-12 w-full">
+        <h3 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-1 text-center md:text-left">Dance Academy</h3>
+        <span class="text-xl md:text-2xl font-light text-white text-center md:text-left">Energy and Passion</span>
       </div>
     </div>
     <!-- Street Dance -->
-    <div class="relative flex-1 min-w-0 h-[260px] md:h-[340px] rounded-xl overflow-hidden shadow-lg flex items-center">
+    <div class="relative flex-1 min-w-0 h-[340px] md:h-[340px] rounded-xl overflow-hidden shadow-lg flex items-center">
       <img src="images/streetdance.png"
         alt="Street Dance"
         class="absolute inset-0 w-full h-full object-cover"/>
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-      <div class="relative z-10 flex flex-col items-start justify-center h-full pl-12">
-        <h3 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow mb-1">Street Dance</h3>
-        <span class="text-2xl font-light text-white">Skill and Attitude</span>
+      <div class="relative z-10 flex flex-col items-center md:items-start justify-center h-full pl-0 md:pl-12 w-full">
+        <h3 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-1 text-center md:text-left">Street Dance</h3>
+        <span class="text-xl md:text-2xl font-light text-white text-center md:text-left">Skill and Attitude</span>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
