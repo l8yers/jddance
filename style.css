@@ -30,7 +30,6 @@ body.menu-open {
   width: 100%;
 }
 
-
 .g-text {
   background: linear-gradient(90deg, var(--pink), var(--green));
   -webkit-background-clip: text;
@@ -146,13 +145,37 @@ footer {
 
 /* Slide-in panel (hidden by default) */
 .slide-menu {
-  position: fixed; top: 0; right: -280px; width: 260px; height: 100vh;
-  background: rgba(12,12,14,.96);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  padding: 72px 22px; box-shadow: -6px 0 28px rgba(0,0,0,.45);
-  transition: right .28s ease; z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  width: 260px;
+  height: 100vh;
+  background: rgba(12, 12, 14, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 72px 22px;
+  box-shadow: -6px 0 28px rgba(0, 0, 0, 0.45);
+  transition: transform 0.28s ease;
+  z-index: 1000;
+  overflow-y: auto;
 }
-.slide-menu.open { right: 0; }
+
+.slide-menu.open {
+  transform: translateX(0);
+}
+
+.close-menu {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 .slide-menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 .slide-menu a {
   color: #fff; text-decoration: none; font-weight: 700; font-size: 1.05rem;
@@ -162,7 +185,6 @@ footer {
 
 /* ========== Mobile layout tweaks (≤900px) ========== */
 @media (max-width: 900px) {
-  /* Keep header tidy */
   .nav-desktop { display: none; }
   .menu-toggle { display: flex; }
   header .nav { align-items: center; }
@@ -172,7 +194,6 @@ footer {
   .hero .wrap {
     display: grid;
     grid-template-columns: 1fr;
-    /* establish the order for mobile */
     grid-template-areas:
       "eyebrow"
       "title"
@@ -183,10 +204,7 @@ footer {
     gap: 12px;
   }
 
-  /* flatten the first content block so its children can become grid items */
   .hero .wrap > div:first-child { display: contents; }
-
-  /* map elements to areas */
   .hero .eyebrow { grid-area: eyebrow; }
   .hero h1 { grid-area: title; }
   .hero p { grid-area: para; }
@@ -194,16 +212,13 @@ footer {
   .hero .buttons { grid-area: buttons; margin-top: 4px; }
   .hero .highlights { grid-area: highlights; margin-top: 8px; }
 
-  /* reduce vertical bulk a touch on video */
   .hero .media { aspect-ratio: 4/5; }
 
-  /* Cards & quotes stack */
   .highlights { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .quotes { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 
-  /* Schedule band stacks cleanly with full-width CTA */
   .band {
     grid-template-columns: 1fr;
     text-align: center;

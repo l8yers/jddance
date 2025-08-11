@@ -48,6 +48,9 @@
 
       <!-- Slide-in mobile menu -->
       <nav class="slide-menu" id="mobileMenu" aria-label="Mobile">
+        <button class="close-menu" id="closeMenu" aria-label="Close menu">
+          &times;
+        </button>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#schedule">Schedule</a></li>
@@ -330,25 +333,22 @@
 
       // Mobile slide-in menu
       const toggle = document.getElementById("menuToggle");
+      const closeBtn = document.getElementById("closeMenu");
       const mobileMenu = document.getElementById("mobileMenu");
 
       function setOpen(state) {
         mobileMenu.classList.toggle("open", state);
         toggle.setAttribute("aria-expanded", state ? "true" : "false");
-
-        if (state) {
-          document.body.classList.add("menu-open");
-        } else {
-          document.body.classList.remove("menu-open");
-        }
+        document.body.classList.toggle("menu-open", state);
       }
 
-      toggle.addEventListener("click", () =>
-        setOpen(!mobileMenu.classList.contains("open"))
-      );
+      toggle.addEventListener("click", () => setOpen(true));
+      closeBtn.addEventListener("click", () => setOpen(false));
+
       mobileMenu.addEventListener("click", (e) => {
         if (e.target.closest("a")) setOpen(false);
       });
+
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") setOpen(false);
       });
