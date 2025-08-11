@@ -23,6 +23,14 @@ body {
   line-height: 1.55;
 }
 
+/* Prevent scroll bounce & horizontal wobble when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+
 .g-text {
   background: linear-gradient(90deg, var(--pink), var(--green));
   -webkit-background-clip: text;

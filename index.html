@@ -132,7 +132,9 @@
               <div class="content">
                 <span class="badge g-pill">Ballet</span>
                 <h3>Grace & precision</h3>
-                <p>Build strong technique and musicality in a supportive class.</p>
+                <p>
+                  Build strong technique and musicality in a supportive class.
+                </p>
               </div>
             </article>
 
@@ -144,7 +146,9 @@
               <div class="content">
                 <span class="badge g-pill">Street</span>
                 <h3>Skill & attitude</h3>
-                <p>High-energy choreography with room to develop your own style.</p>
+                <p>
+                  High-energy choreography with room to develop your own style.
+                </p>
               </div>
             </article>
 
@@ -156,7 +160,10 @@
               <div class="content">
                 <span class="badge g-pill">Acro / Commercial</span>
                 <h3>Strength & performance</h3>
-                <p>Improve flexibility, tricks and stage presence with fun combos.</p>
+                <p>
+                  Improve flexibility, tricks and stage presence with fun
+                  combos.
+                </p>
               </div>
             </article>
           </div>
@@ -217,10 +224,14 @@
           <div class="section-head"><h2>What parents say</h2></div>
           <div class="quotes">
             <blockquote class="quote">
-              <p>“Lovely, friendly school. My daughter’s confidence has shot up!”</p>
+              <p>
+                “Lovely, friendly school. My daughter’s confidence has shot up!”
+              </p>
             </blockquote>
             <blockquote class="quote">
-              <p>“Great value classes and brilliant teachers — highly recommend.”</p>
+              <p>
+                “Great value classes and brilliant teachers — highly recommend.”
+              </p>
             </blockquote>
           </div>
         </div>
@@ -267,15 +278,42 @@
         </div>
         <div>
           <h4 style="margin: 0.2rem 0">Links</h4>
-          <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 8px;">
-            <li><a href="#classes" style="color: #fff; text-decoration: none">Classes</a></li>
-            <li><a href="#schedule" style="color: #fff; text-decoration: none">Schedule</a></li>
-            <li><a href="#hire" style="color: #fff; text-decoration: none">Studio Hire</a></li>
-            <li><a href="#book" style="color: #fff; text-decoration: none">Book a Class</a></li>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: grid;
+              gap: 8px;
+            "
+          >
+            <li>
+              <a href="#classes" style="color: #fff; text-decoration: none"
+                >Classes</a
+              >
+            </li>
+            <li>
+              <a href="#schedule" style="color: #fff; text-decoration: none"
+                >Schedule</a
+              >
+            </li>
+            <li>
+              <a href="#hire" style="color: #fff; text-decoration: none"
+                >Studio Hire</a
+              >
+            </li>
+            <li>
+              <a href="#book" style="color: #fff; text-decoration: none"
+                >Book a Class</a
+              >
+            </li>
           </ul>
         </div>
       </div>
-      <div class="container" style="margin-top: 22px; color: #9a9a9a; font-size: 0.9rem">
+      <div
+        class="container"
+        style="margin-top: 22px; color: #9a9a9a; font-size: 0.9rem"
+      >
         © <span id="year"></span> Jennifer Doolan Dance. All rights reserved.
       </div>
     </footer>
@@ -285,21 +323,35 @@
 
       // Respect reduced motion
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        document.querySelectorAll(".hero .media video").forEach((v) => v.pause());
+        document
+          .querySelectorAll(".hero .media video")
+          .forEach((v) => v.pause());
       }
 
       // Mobile slide-in menu
-      const toggle = document.getElementById('menuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
+      const toggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
 
-      function setOpen(state){
-        mobileMenu.classList.toggle('open', state);
-        toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
-        document.body.style.overflow = state ? 'hidden' : '';
+      function setOpen(state) {
+        mobileMenu.classList.toggle("open", state);
+        toggle.setAttribute("aria-expanded", state ? "true" : "false");
+
+        if (state) {
+          document.body.classList.add("menu-open");
+        } else {
+          document.body.classList.remove("menu-open");
+        }
       }
-      toggle.addEventListener('click', ()=> setOpen(!mobileMenu.classList.contains('open')));
-      mobileMenu.addEventListener('click', e => { if(e.target.closest('a')) setOpen(false); });
-      document.addEventListener('keydown', e => { if(e.key === 'Escape') setOpen(false); });
+
+      toggle.addEventListener("click", () =>
+        setOpen(!mobileMenu.classList.contains("open"))
+      );
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target.closest("a")) setOpen(false);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setOpen(false);
+      });
     </script>
   </body>
 </html>
