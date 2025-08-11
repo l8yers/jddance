@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JD Dance — Salford</title>
+    <meta
+      name="description"
+      content="JD Dance — community dance classes in Salford & Manchester for all ages and levels."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pink: #f854b2;
+        --green: #52da52;
+        --ink: #0a0a0a;
+        --muted: #666;
+        --bg: #0f0f10;
+        --card: #16171a;
+        --radius: 14px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        color: #fff;
+        background: radial-gradient(
+            1200px 800px at 10% -10%,
+            rgba(248, 84, 178, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            1200px 800px at 110% 10%,
+            rgba(82, 218, 82, 0.18),
+            transparent 60%
+          ),
+          #0c0c0e;
+        line-height: 1.55;
+      }
+
+      .g-text {
+        background: linear-gradient(90deg, var(--pink), var(--green));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .g-bg {
+        background: linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--pink), #000 14%),
+          color-mix(in srgb, var(--green), #000 8%)
+        );
+      }
+      .g-pill {
+        background: linear-gradient(90deg, var(--pink), var(--green));
+      }
+
+      .container {
+        width: min(1200px, 92vw);
+        margin-inline: auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(8px);
+        background: rgba(15, 15, 16, 0.55);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        height: 110px;
+        width: auto;
+        display: block;
+      }
+      nav ul {
+        display: flex;
+        gap: 18px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.9;
+        font-weight: 600;
+      }
+      nav a:hover {
+        opacity: 1;
+      }
+
+      .cta {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 800;
+        text-decoration: none;
+        color: #0b0b0b;
+      }
+      .cta-outline {
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .hero {
+        padding: 80px 0 40px;
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 36px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .hero h1 {
+        font-size: clamp(2.1rem, 1.8rem + 2vw, 3.2rem);
+        margin: 12px 0;
+        line-height: 1.1;
+      }
+      .hero p {
+        color: #d6d6d6;
+        font-size: 1.05rem;
+      }
+      .hero .buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+      }
+
+      .hero .media {
+        aspect-ratio: 1/1;
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+        background: #0b0c0e;
+      }
+      .hero .media video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero .media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+      }
+      .hero .media::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--pink), transparent 74%),
+          color-mix(in srgb, var(--green), transparent 78%)
+        );
+        mix-blend-mode: screen;
+        opacity: 0.35;
+        pointer-events: none;
+      }
+
+      .highlights {
+        padding: 36px 0 8px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .tile {
+        padding: 18px;
+        border-radius: var(--radius);
+        background: #121315;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      section {
+        padding: 56px 0;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .card {
+        background: #121315;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+      .card .img {
+        aspect-ratio: 4/3;
+        background: #222 center/cover no-repeat;
+      }
+      .card .content {
+        padding: 14px 16px 18px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: #0d0d0e;
+      }
+
+      .band {
+        margin-top: 32px;
+        border-radius: 18px;
+        padding: 22px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .quotes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .quote {
+        padding: 18px;
+        border-radius: var(--radius);
+        background: #121315;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      footer {
+        margin-top: 10vh;
+        padding: 48px 0 60px;
+        background: #0b0b0c;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 20px;
+      }
+      .muted {
+        color: #a8a8a8;
+      }
+      .social {
+        display: flex;
+        gap: 12px;
+      }
+
+      @media (max-width: 900px) {
+        .hero .wrap {
+          grid-template-columns: 1fr;
+        }
+        .highlights {
+          grid-template-columns: 1fr;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+        .quotes {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#">
+          <img src="assets/logo.png" alt="JD Dance logo" />
+        </a>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#hire">Studio Hire</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container wrap">
+          <div>
+            <span class="eyebrow">Community dance school in Salford</span>
+            <h1>
+              Find your confidence <span class="g-text">through dance</span>.
+            </h1>
+            <p>
+              Affordable, high‑quality classes for all ages and levels in
+              ballet, street, acro, commercial and more — in a safe, friendly
+              studio.
+            </p>
+            <div class="buttons">
+              <a class="cta g-pill" href="#book">Start with a free taster</a>
+              <a class="cta cta-outline" href="#schedule"
+                >See the schedule (PDF)</a
+              >
+            </div>
+            <div class="highlights">
+              <div class="tile">
+                <h3 class="g-text">DBS checked teachers</h3>
+                <p>All staff are first‑aid trained and DBS certified.</p>
+              </div>
+              <div class="tile">
+                <h3 class="g-text">All ages & abilities</h3>
+                <p>From tiny dancers to teens — beginners welcome.</p>
+              </div>
+              <div class="tile">
+                <h3 class="g-text">Perform & progress</h3>
+                <p>
+                  Build technique, confidence and friendships. Recitals &
+                  events.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="media" role="img" aria-label="Students dancing in studio">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/jddance.jpg"
+            >
+              <source src="assets/jddance.webm" type="video/webm" />
+              <source src="assets/jddance.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED CLASSES -->
+      <section id="classes">
+        <div class="container">
+          <div class="section-head">
+            <h2>Classes we offer</h2>
+            <a class="cta cta-outline" href="#book">View all & book →</a>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div
+                class="img"
+                style="background-image: url('assets/ballet.jpeg')"
+              ></div>
+              <div class="content">
+                <span class="badge g-pill">Ballet</span>
+                <h3>Grace & precision</h3>
+                <p>
+                  Build strong technique and musicality in a supportive class.
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <div
+                class="img"
+                style="background-image: url('assets/street.jpeg')"
+              ></div>
+              <div class="content">
+                <span class="badge g-pill">Street</span>
+                <h3>Skill & attitude</h3>
+                <p>
+                  High‑energy choreography with room to develop your own style.
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <div
+                class="img"
+                style="background-image: url('assets/acro.jpeg')"
+              ></div>
+              <div class="content">
+                <span class="badge g-pill">Acro / Commercial</span>
+                <h3>Strength & performance</h3>
+                <p>
+                  Improve flexibility, tricks and stage presence with fun
+                  combos.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="band g-bg">
+            <div>
+              <h3 style="margin: 0 0 6px">Download our schedule</h3>
+              <p style="margin: 0; opacity: 0.9">
+                Full weekly timetable with times, ages and prices.
+              </p>
+            </div>
+            <a class="cta" id="schedule" href="#" download>Download PDF</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDIO HIRE / PROMO -->
+      <section id="hire">
+        <div class="container">
+          <div class="section-head"><h2>Hire the studio</h2></div>
+          <div
+            class="card"
+            style="
+              display: grid;
+              grid-template-columns: 1.2fr 0.8fr;
+              gap: 18px;
+              overflow: hidden;
+            "
+          >
+            <div class="content">
+              <h3 style="margin-top: 10px">From £25 per hour</h3>
+              <p>
+                Perfect for parties, baby showers, rehearsals and community
+                events. One or two floors available.
+              </p>
+              <div class="buttons">
+                <a class="cta g-pill" href="#contact">Enquire now</a>
+                <a class="cta cta-outline" href="mailto:jddanceex@gmail.com"
+                  >jddanceex@gmail.com</a
+                >
+              </div>
+            </div>
+            <div
+              class="img"
+              style="
+                background-image: url('assets/studio.png');
+                background-size: 105% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTES -->
+      <section>
+        <div class="container">
+          <div class="section-head"><h2>What parents say</h2></div>
+          <div class="quotes">
+            <blockquote class="quote">
+              <p>
+                “Lovely, friendly school. My daughter’s confidence has shot up!”
+              </p>
+            </blockquote>
+            <blockquote class="quote">
+              <p>
+                “Great value classes and brilliant teachers — highly recommend.”
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div class="container footer-grid">
+        <div>
+          <h3 class="g-text" style="margin-top: 0">Say hello</h3>
+          <p class="muted">
+            Email
+            <a href="mailto:jddanceex@gmail.com" style="color: #fff"
+              >jddanceex@gmail.com</a
+            >
+            or call
+            <a href="tel:07478479697" style="color: #fff">07587107317</a>.
+          </p>
+          <div class="social">
+            <a
+              class="cta cta-outline"
+              href="https://www.facebook.com/jddance7"
+              target="_blank"
+              rel="noopener"
+              >Facebook</a
+            >
+            <a
+              class="cta cta-outline"
+              href="https://www.instagram.com/jddancestudio/"
+              target="_blank"
+              rel="noopener"
+              >Instagram</a
+            >
+          </div>
+        </div>
+        <div>
+          <h4 style="margin: 0.2rem 0">Visit us</h4>
+          <p class="muted">
+            Lockett St <br />
+            Manchester <br />
+            M8 8EF<br />
+          </p>
+        </div>
+        <div>
+          <h4 style="margin: 0.2rem 0">Links</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: grid;
+              gap: 8px;
+            "
+          >
+            <li>
+              <a href="#classes" style="color: #fff; text-decoration: none"
+                >Classes</a
+              >
+            </li>
+            <li>
+              <a href="#schedule" style="color: #fff; text-decoration: none"
+                >Schedule</a
+              >
+            </li>
+            <li>
+              <a href="#hire" style="color: #fff; text-decoration: none"
+                >Studio Hire</a
+              >
+            </li>
+            <li>
+              <a href="#book" style="color: #fff; text-decoration: none"
+                >Book a Class</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="container"
+        style="margin-top: 22px; color: #9a9a9a; font-size: 0.9rem"
+      >
+        © <span id="year"></span> Jennifer Doolan Dance. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      // Respect reduced motion preference
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document
+          .querySelectorAll(".hero .media video")
+          .forEach((v) => v.pause());
+      }
+    </script>
+  </body>
+</html>

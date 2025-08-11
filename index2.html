@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JD Dance — Salford</title>
+    <meta
+      name="description"
+      content="JD Dance — community dance classes in Salford & Manchester for all ages and levels."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#">
+          <img src="assets/logo.png" alt="JD Dance logo" />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="nav-desktop" aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#hire">Studio Hire</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile toggle -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Slide-in mobile menu -->
+      <nav class="slide-menu" id="mobileMenu" aria-label="Mobile">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#hire">Studio Hire</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="about">
+        <div class="container wrap">
+          <div>
+            <span class="eyebrow">Community dance school in Salford</span>
+            <h1>
+              Find your confidence <span class="g-text">through dance</span>.
+            </h1>
+            <p>
+              Affordable, high-quality classes for all ages and levels in
+              ballet, street, acro, commercial and more — in a safe, friendly
+              studio.
+            </p>
+
+            <div class="buttons">
+              <a class="cta g-pill" href="#book">Start with a free taster</a>
+              <a class="cta cta-outline" href="#schedule"
+                >See the schedule (PDF)</a
+              >
+            </div>
+
+            <div class="highlights">
+              <div class="tile">
+                <h3 class="g-text">DBS checked teachers</h3>
+                <p>All staff are first-aid trained and DBS certified.</p>
+              </div>
+              <div class="tile">
+                <h3 class="g-text">All ages & abilities</h3>
+                <p>From tiny dancers to teens — beginners welcome.</p>
+              </div>
+              <div class="tile">
+                <h3 class="g-text">Perform & progress</h3>
+                <p>
+                  Build technique, confidence and friendships. Recitals &
+                  events.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="media" role="img" aria-label="Students dancing in studio">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/jddance.jpg"
+            >
+              <source src="assets/jddance.webm" type="video/webm" />
+              <source src="assets/jddance.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED CLASSES -->
+      <section id="classes">
+        <div class="container">
+          <div class="section-head">
+            <h2>Classes we offer</h2>
+            <a class="cta cta-outline" href="#book">View all & book →</a>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div
+                class="img"
+                style="background-image: url('assets/ballet.jpeg')"
+              ></div>
+              <div class="content">
+                <span class="badge g-pill">Ballet</span>
+                <h3>Grace & precision</h3>
+                <p>Build strong technique and musicality in a supportive class.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div
+                class="img"
+                style="background-image: url('assets/street.jpeg')"
+              ></div>
+              <div class="content">
+                <span class="badge g-pill">Street</span>
+                <h3>Skill & attitude</h3>
+                <p>High-energy choreography with room to develop your own style.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div
+                class="img"
+                style="background-image: url('assets/acro.jpeg')"
+              ></div>
+              <div class="content">
+                <span class="badge g-pill">Acro / Commercial</span>
+                <h3>Strength & performance</h3>
+                <p>Improve flexibility, tricks and stage presence with fun combos.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="band g-bg">
+            <div>
+              <h3 style="margin: 0 0 6px">Download our schedule</h3>
+              <p style="margin: 0; opacity: 0.9">
+                Full weekly timetable with times, ages and prices.
+              </p>
+            </div>
+            <a class="cta" id="schedule" href="#" download>Download PDF</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDIO HIRE / PROMO -->
+      <section id="hire">
+        <div class="container">
+          <div class="section-head"><h2>Hire the studio</h2></div>
+          <div
+            class="card"
+            style="
+              display: grid;
+              grid-template-columns: 1.2fr 0.8fr;
+              gap: 18px;
+              overflow: hidden;
+            "
+          >
+            <div class="content">
+              <h3 style="margin-top: 10px">From £25 per hour</h3>
+              <p>
+                Perfect for parties, baby showers, rehearsals and community
+                events. One or two floors available.
+              </p>
+              <div class="buttons">
+                <a class="cta g-pill" href="#contact">Enquire now</a>
+                <!-- email button removed on request -->
+              </div>
+            </div>
+
+            <div
+              class="img"
+              style="
+                background-image: url('assets/studio.png');
+                background-size: 105% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTES -->
+      <section>
+        <div class="container">
+          <div class="section-head"><h2>What parents say</h2></div>
+          <div class="quotes">
+            <blockquote class="quote">
+              <p>“Lovely, friendly school. My daughter’s confidence has shot up!”</p>
+            </blockquote>
+            <blockquote class="quote">
+              <p>“Great value classes and brilliant teachers — highly recommend.”</p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div class="container footer-grid">
+        <div>
+          <h3 class="g-text" style="margin-top: 0">Say hello</h3>
+          <p class="muted">
+            Email
+            <a href="mailto:jddanceex@gmail.com" style="color: #fff"
+              >jddanceex@gmail.com</a
+            >
+            or call
+            <a href="tel:07478479697" style="color: #fff">07587107317</a>.
+          </p>
+          <div class="social">
+            <a
+              class="cta cta-outline"
+              href="https://www.facebook.com/jddance7"
+              target="_blank"
+              rel="noopener"
+              >Facebook</a
+            >
+            <a
+              class="cta cta-outline"
+              href="https://www.instagram.com/jddancestudio/"
+              target="_blank"
+              rel="noopener"
+              >Instagram</a
+            >
+          </div>
+        </div>
+        <div>
+          <h4 style="margin: 0.2rem 0">Visit us</h4>
+          <p class="muted">
+            Lockett St <br />
+            Manchester <br />
+            M8 8EF<br />
+          </p>
+        </div>
+        <div>
+          <h4 style="margin: 0.2rem 0">Links</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 8px;">
+            <li><a href="#classes" style="color: #fff; text-decoration: none">Classes</a></li>
+            <li><a href="#schedule" style="color: #fff; text-decoration: none">Schedule</a></li>
+            <li><a href="#hire" style="color: #fff; text-decoration: none">Studio Hire</a></li>
+            <li><a href="#book" style="color: #fff; text-decoration: none">Book a Class</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container" style="margin-top: 22px; color: #9a9a9a; font-size: 0.9rem">
+        © <span id="year"></span> Jennifer Doolan Dance. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Respect reduced motion
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".hero .media video").forEach((v) => v.pause());
+      }
+
+      // Mobile slide-in menu
+      const toggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      function setOpen(state){
+        mobileMenu.classList.toggle('open', state);
+        toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
+        document.body.style.overflow = state ? 'hidden' : '';
+      }
+      toggle.addEventListener('click', ()=> setOpen(!mobileMenu.classList.contains('open')));
+      mobileMenu.addEventListener('click', e => { if(e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', e => { if(e.key === 'Escape') setOpen(false); });
+    </script>
+  </body>
+</html>
