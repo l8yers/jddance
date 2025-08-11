@@ -11,6 +11,8 @@
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+/* Prevent any horizontal scrolling */
+html, body { overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -23,7 +25,7 @@ body {
   line-height: 1.55;
 }
 
-/* Prevent scroll bounce & horizontal wobble when mobile menu is open */
+/* Lock viewport when mobile menu is open */
 body.menu-open {
   overflow: hidden;
   position: fixed;
@@ -143,38 +145,23 @@ footer {
 }
 .menu-toggle span { display: block; width: 26px; height: 3px; background: #fff; border-radius: 2px; }
 
-/* Slide-in panel (hidden by default) */
+/* Off-canvas slide-in panel (hidden by default, no horizontal scroll peek) */
 .slide-menu {
   position: fixed;
   top: 0;
-  right: 0;
-  transform: translateX(100%);
+  right: -100%;      /* fully off-screen regardless of device width */
   width: 260px;
   height: 100vh;
-  background: rgba(12, 12, 14, 0.96);
+  background: rgba(12,12,14,.96);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 72px 22px;
-  box-shadow: -6px 0 28px rgba(0, 0, 0, 0.45);
-  transition: transform 0.28s ease;
+  box-shadow: -6px 0 28px rgba(0,0,0,.45);
+  transition: right .28s ease;
   z-index: 1000;
   overflow-y: auto;
 }
-
-.slide-menu.open {
-  transform: translateX(0);
-}
-
-.close-menu {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-}
+.slide-menu.open { right: 0; }
 
 .slide-menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 .slide-menu a {
@@ -183,6 +170,27 @@ footer {
 }
 .slide-menu a:hover { background: rgba(255,255,255,.08); }
 
+/* Close button in mobile menu */
+.close-menu{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  color:#fff;
+  font-size:1.6rem;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.close-menu:hover{ background:rgba(255,255,255,.12); }
+.close-menu:focus{ outline:2px solid color-mix(in srgb, var(--pink), transparent 50%); outline-offset:2px; }
+
 /* ========== Mobile layout tweaks (≤900px) ========== */
 @media (max-width: 900px) {
   .nav-desktop { display: none; }
@@ -190,7 +198,7 @@ footer {
   header .nav { align-items: center; }
   .brand img { height: 84px; width: auto; }
 
-  /* HERO: reorder so VIDEO appears right after the paragraph without changing desktop HTML */
+  /* HERO: reorder so VIDEO appears right after paragraph without changing desktop HTML */
   .hero .wrap {
     display: grid;
     grid-template-columns: 1fr;
@@ -235,24 +243,3 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .slide-menu { transition: none; }
 }
-
-/* Close button in mobile menu */
-.close-menu{
-  position:absolute;
-  top:12px;
-  right:12px;
-  width:40px;
-  height:40px;
-  border-radius:10px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
-  color:#fff;
-  font-size:1.6rem;
-  line-height:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-}
-.close-menu:hover{ background:rgba(255,255,255,.12); }
-.close-menu:focus{ outline:2px solid color-mix(in srgb, var(--pink), transparent 50%); outline-offset:2px; }
