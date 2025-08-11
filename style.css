@@ -235,3 +235,24 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .slide-menu { transition: none; }
 }
+
+/* Close button in mobile menu */
+.close-menu{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  color:#fff;
+  font-size:1.6rem;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.close-menu:hover{ background:rgba(255,255,255,.12); }
+.close-menu:focus{ outline:2px solid color-mix(in srgb, var(--pink), transparent 50%); outline-offset:2px; }
