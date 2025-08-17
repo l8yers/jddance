@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • JD Dance — Salford</title>
+  <meta name="description" content="Contact JD Dance — ask about classes, the studio or bookings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Pink-only theme overrides */
+    .theme-pink .g-text{
+      background: linear-gradient(90deg, var(--pink), color-mix(in srgb, var(--pink), white 25%));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .theme-pink .g-bg{
+      background: linear-gradient(135deg,
+        color-mix(in srgb, var(--pink), #000 12%),
+        color-mix(in srgb, var(--pink), #000 22%)
+      );
+    }
+    .theme-pink .g-pill{
+      background: linear-gradient(90deg, var(--pink), color-mix(in srgb, var(--pink), white 25%));
+      color:#0b0b0b;
+    }
+    .theme-pink .hero .media::before{
+      background: linear-gradient(135deg,
+        color-mix(in srgb, var(--pink), transparent 70%),
+        color-mix(in srgb, var(--pink), transparent 80%)
+      );
+    }
+
+    /* Form styles (minimal) */
+    .form { display:grid; gap:12px; }
+    .form .row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .form label { display:block; font-weight:700; margin-bottom:4px; }
+    .form input, .form select, .form textarea {
+      width:100%; padding:12px 14px; border-radius:10px;
+      border:1px solid rgba(255,255,255,.16); background:#121315; color:#fff;
+    }
+    .form textarea { min-height:120px; resize:vertical; }
+    @media (max-width:900px){ .form .row { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body class="theme-pink">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="JD Dance logo" /></a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="studiohire.html">Studio Hire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="slide-menu" id="mobileMenu" aria-label="Mobile">
+      <button class="close-menu" id="closeMenu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="studiohire.html">Studio Hire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="eyebrow">Say hello</span>
+          <h1>Contact <span class="g-text">JD Dance</span></h1>
+          <p class="lede">Ask about classes, studio hire or anything else — we’re friendly and quick to reply.</p>
+          <div class="buttons">
+            <a class="cta g-pill" href="tel:07587107317">Call 07587107317</a>
+            <a class="cta cta-outline" href="mailto:jddanceex@gmail.com">Email us</a>
+          </div>
+        </div>
+        <div class="media">
+          <div style="position:absolute; inset:0; background:url('assets/jddance14.jpeg') center/cover no-repeat;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section>
+      <div class="container">
+        <div class="section-head"><h2>Send a message</h2></div>
+        <!-- Note: For production, wire this up to Formspree/Netlify or your backend -->
+        <form class="form" action="mailto:jddanceex@gmail.com" method="post" enctype="text/plain">
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" required />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="Phone" type="tel" />
+            </div>
+            <div>
+              <label for="interest">I'm interested in</label>
+              <select id="interest" name="Interest">
+                <option value="Classes">Classes</option>
+                <option value="Studio Hire">Studio Hire</option>
+                <option value="Taster">Free taster</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="Tell us what you need…" required></textarea>
+          </div>
+          <div class="buttons" style="margin-top:6px">
+            <button type="submit" class="cta g-pill">Send message</button>
+            <button type="reset" class="cta cta-outline">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ALT CONTACT -->
+    <section>
+      <div class="container">
+        <div class="band g-bg">
+          <div>
+            <h3 style="margin:0 0 6px">Prefer email or phone?</h3>
+            <p style="margin:0;opacity:.9">
+              <a href="mailto:jddanceex@gmail.com" style="color:#fff; text-decoration:underline">jddanceex@gmail.com</a> ·
+              <a href="tel:07587107317" style="color:#fff; text-decoration:underline">07587107317</a>
+            </p>
+          </div>
+          <a class="cta" href="schedule.html">See the schedule</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="g-text" style="margin-top:0">Say hello</h3>
+        <p class="muted">Email <a href="mailto:jddanceex@gmail.com" style="color:#fff">jddanceex@gmail.com</a> or call <a href="tel:07587107317" style="color:#fff">07587107317</a>.</p>
+        <div class="social">
+          <a class="cta cta-outline" href="https://www.facebook.com/jddance7" target="_blank" rel="noopener">Facebook</a>
+          <a class="cta cta-outline" href="https://www.instagram.com/jddancee/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+        <div>
+          <h4 style="margin: 0.2rem 0">Visit us</h4>
+          <p class="muted">
+            Lockett St <br />
+            Manchester <br />
+            M8 8EF <br />
+          </p>
+        </div>
+      <div>
+        <h4 style="margin:.2rem 0">Links</h4>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px;">
+          <li><a href="about.html" style="color:#fff; text-decoration:none">About</a></li>
+          <li><a href="classes.html" style="color:#fff; text-decoration:none">Classes</a></li>
+          <li><a href="studiohire.html" style="color:#fff; text-decoration:none">Studio Hire</a></li>
+          <li><a href="contact.html" style="color:#fff; text-decoration:none">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; color:#9a9a9a; font-size:.9rem">
+      © <span id="year"></span> Jennifer Doolan Dance. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const toggle = document.getElementById("menuToggle");
+    const closeBtn = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    function setOpen(state){ mobileMenu.classList.toggle("open", state); toggle.setAttribute("aria-expanded", state ? "true" : "false"); document.body.classList.toggle("menu-open", state); }
+    toggle.addEventListener("click", () => setOpen(true));
+    closeBtn.addEventListener("click", () => setOpen(false));
+    mobileMenu.addEventListener("click", e => { if (e.target.closest("a")) setOpen(false); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") setOpen(false); });
+  </script>
+</body>
+</html>

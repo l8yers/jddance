@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • JD Dance — Salford</title>
+  <meta name="description" content="About JD Dance — community dance classes in Salford & Manchester. Our story, values and team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-specific overrides: green-only theme + gallery helpers -->
+  <style>
+    /* Green-only variant */
+    .theme-green .g-text{
+      background: linear-gradient(90deg, var(--green), color-mix(in srgb, var(--green), white 25%));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .theme-green .g-bg{
+      background: linear-gradient(135deg,
+        color-mix(in srgb, var(--green), #000 8%),
+        color-mix(in srgb, var(--green), #000 18%)
+      );
+    }
+    .theme-green .g-pill{
+      background: linear-gradient(90deg, var(--green), color-mix(in srgb, var(--green), white 25%));
+      color:#0b0b0b;
+    }
+    .theme-green .hero .media::before{
+      background: linear-gradient(135deg,
+        color-mix(in srgb, var(--green), transparent 70%),
+        color-mix(in srgb, var(--green), transparent 80%)
+      );
+    }
+
+    /* About page tweaks (original) */
+    .lede { color:#d6d6d6; font-size:1.1rem; max-width:70ch }
+    .twocol { display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:start }
+    .panel { background:#121315; border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:18px }
+    .team { display:grid; grid-template-columns: .9fr 1.1fr; gap:18px; align-items:center }
+    .team .photo { aspect-ratio:1/1; background:#111 center/cover no-repeat; border-radius:16px; border:1px solid rgba(255,255,255,.06) }
+
+    /* Original responsive tweaks */
+    @media (max-width: 900px){
+      .twocol { grid-template-columns:1fr }
+      .team { grid-template-columns:1fr }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr) }
+    }
+
+    /* Team card grid — added (two cols desktop, one mobile) */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    @media (min-width: 700px) {
+      .team-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .team-grid .card {
+      background:#121315;
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:18px;
+      padding:16px;
+      text-align:center;
+    }
+    .team-grid .avatar {
+      width: 85%;
+      max-width: 220px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      display:block;
+      margin: 0 auto 10px;
+    }
+    .team-grid h3 { margin: 6px 0 2px; font-size:1.05rem }
+    .team-grid p { margin: 0; color:#cfcfcf }
+  </style>
+</head>
+
+<body class="theme-green">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="JD Dance logo" /></a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="studiohire.html">Studio Hire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="slide-menu" id="mobileMenu" aria-label="Mobile">
+      <button class="close-menu" id="closeMenu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="studiohire.html">Studio Hire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO (original layout; text + image updated only) -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="eyebrow">Our story</span>
+          <h1>About <span class="g-text">JD Dance</span></h1>
+          <p class="lede">
+            Jennie Doolan Dance CIC was established in 2016. We are a local dance school in Broughton
+            where Salford borders Manchester. Our aim is to provide a safe space in which children can
+            gain skills, have fun and grow confidence.
+          </p>
+          <p class="lede">
+            JD DANCE is a family which builds confidence through high quality, affordable dance classes
+            for children from 2–16 years old. All of our teachers are DBS checked, first aid trained
+            and have safeguarding training regularly.
+          </p>
+          <div class="buttons">
+            <a class="cta g-pill" href="index.html#classes">Explore classes</a>
+            <a class="cta cta-outline" href="contact.html">Contact us</a>
+          </div>
+        </div>
+
+        <!-- Square visual (only the URL changed) -->
+        <div class="media" style="background: #0b0c0e">
+          <div style="position:absolute; inset:0; background:url('assets/jddance16.jpeg') center/cover no-repeat;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY A — In the studio (unchanged from your original: 6 images) -->
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery-grid">
+          <div class="shot" style="background-image:url('assets/jddance02.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance03.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance10.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance05.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance06.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance13.jpeg')"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Meet the Team card grid (two columns desktop, one mobile) -->
+    <section class="container wrap">
+      <h2 class="g-text">Meet the Team</h2>
+      <div class="team-grid">
+        <article class="card">
+          <img src="assets/jenny.jpeg" alt="Jennifer Doolan" class="avatar">
+          <h3>Jennifer Doolan</h3>
+          <p>Owner of JD DANCE</p>
+        </article>
+        <article class="card">
+          <img src="assets/anna.jpeg" alt="Anna Smithies" class="avatar">
+          <h3>Anna Smithies</h3>
+          <p>Dance Teacher</p>
+        </article>
+        <article class="card">
+          <img src="assets/kate.jpeg" alt="Kate Hannah" class="avatar">
+          <h3>Kate Hannah</h3>
+          <p>Dance Teacher</p>
+        </article>
+        <article class="card">
+          <img src="assets/kayleigh.jpeg" alt="Kayleigh Jones" class="avatar">
+          <h3>Kayleigh Jones</h3>
+          <p>Admin / Director</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALLERY B — Performances & classes (unchanged from your original: 6 images) -->
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery-grid">
+          <div class="shot" style="background-image:url('assets/jddance09.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance04.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance11.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance12.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance07.jpeg')"></div>
+          <div class="shot" style="background-image:url('assets/jddance14.jpeg')"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND (exact code you provided) -->
+    <section>
+      <div class="container">
+        <div class="band g-bg">
+          <div>
+            <h3 style="margin:0 0 6px">Ready to try a class?</h3>
+            <p style="margin:0; opacity:.9">Check the schedule and book a taster session.</p>
+          </div>
+          <a class="cta" href="index.html#classes">Explore classes</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Original footer preserved -->
+ <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="g-text" style="margin-top:0">Say hello</h3>
+        <p class="muted">Email <a href="mailto:jddanceex@gmail.com" style="color:#fff">jddanceex@gmail.com</a> or call <a href="tel:07587107317" style="color:#fff">07587107317</a>.</p>
+        <div class="social">
+          <a class="cta cta-outline" href="https://www.facebook.com/jddance7" target="_blank" rel="noopener">Facebook</a>
+          <a class="cta cta-outline" href="https://www.instagram.com/jddancee/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+        <div>
+          <h4 style="margin: 0.2rem 0">Visit us</h4>
+          <p class="muted">
+            Lockett St <br />
+            Manchester <br />
+            M8 8EF <br />
+          </p>
+        </div>
+      <div>
+        <h4 style="margin:.2rem 0">Links</h4>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px;">
+          <li><a href="about.html" style="color:#fff; text-decoration:none">About</a></li>
+          <li><a href="classes.html" style="color:#fff; text-decoration:none">Classes</a></li>
+          <li><a href="studiohire.html" style="color:#fff; text-decoration:none">Studio Hire</a></li>
+          <li><a href="contact.html" style="color:#fff; text-decoration:none">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; color:#9a9a9a; font-size:.9rem">
+      © <span id="year"></span> Jennifer Doolan Dance. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
