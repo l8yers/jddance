@@ -174,9 +174,31 @@
     </div>
   </footer>
 
-  <script>
-    const year = document.getElementById('year');
-    if (year) year.textContent = new Date().getFullYear();
-  </script>
+<script>
+  // Year
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const toggle = document.getElementById('menuToggle');
+  const closeBtn = document.getElementById('closeMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function setOpen(state) {
+    if (!mobileMenu || !toggle) return;
+    mobileMenu.classList.toggle('open', state);
+    toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', state);
+  }
+
+  if (toggle) toggle.addEventListener('click', () => setOpen(true));
+  if (closeBtn) closeBtn.addEventListener('click', () => setOpen(false));
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', e => {
+      if (e.target.closest('a')) setOpen(false);
+    });
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+</script>
 </body>
 </html>
