@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Thanks • JD Dance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="theme-pink">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/"><img src="/assets/logo.png" alt="JD Dance logo"></a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/classes.html">Classes</a></li>
+          <li><a href="/studiohire.html">Studio Hire</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:56px 0">
+    <h1 class="g-text">Thanks for your message!</h1>
+    <p>We’ve received your enquiry and will get back to you shortly.</p>
+    <div class="buttons" style="margin-top:12px">
+      <a class="cta g-pill" href="/classes.html">See the schedule</a>
+      <a class="cta cta-outline" href="/">Back to home</a>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <div class="container" style="margin-top:22px; color:#9a9a9a; font-size:.9rem">
+      © <span id="year"></span> Jennifer Doolan Dance. All rights reserved.
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

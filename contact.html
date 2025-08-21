@@ -50,11 +50,11 @@
       <a class="brand" href="index.html"><img src="assets/logo.png" alt="JD Dance logo" /></a>
       <nav class="nav-desktop" aria-label="Primary">
         <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="classes.html">Classes</a></li>
-        <li><a href="studiohire.html">Studio Hire</a></li>
-        <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="studiohire.html">Studio Hire</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
@@ -68,7 +68,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="classes.html">Classes</a></li>
         <li><a href="studiohire.html">Studio Hire</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -92,46 +92,62 @@
       </div>
     </section>
 
-    <!-- CONTACT FORM -->
+    <!-- CONTACT FORM (Netlify) -->
     <section>
       <div class="container">
         <div class="section-head"><h2>Send a message</h2></div>
-        <!-- Note: For production, wire this up to Formspree/Netlify or your backend -->
-        <form class="form" action="mailto:jddanceex@gmail.com" method="post" enctype="text/plain">
+
+        <!-- Netlify form: auto-detected at build time -->
+        <form class="form"
+          name="contact"
+          method="POST"
+          action="/thanks.html"
+          data-netlify="true"
+          netlify-honeypot="bot-field">
+          <!-- required hidden input for Netlify -->
+          <input type="hidden" name="form-name" value="contact">
+          <!-- honeypot field (hidden) -->
+          <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px; opacity:0;">
+
           <div class="row">
             <div>
               <label for="name">Name</label>
-              <input id="name" name="Name" type="text" required />
+              <input id="name" name="name" type="text" required />
             </div>
             <div>
               <label for="email">Email</label>
-              <input id="email" name="Email" type="email" required />
+              <input id="email" name="email" type="email" required />
             </div>
           </div>
+
           <div class="row">
             <div>
               <label for="phone">Phone (optional)</label>
-              <input id="phone" name="Phone" type="tel" />
+              <input id="phone" name="phone" type="tel" />
             </div>
             <div>
               <label for="interest">I'm interested in</label>
-              <select id="interest" name="Interest">
+              <select id="interest" name="interest">
                 <option value="Classes">Classes</option>
                 <option value="Studio Hire">Studio Hire</option>
-                <option value="Taster">Free taster</option>
                 <option value="Other">Other</option>
               </select>
             </div>
           </div>
+
           <div>
             <label for="message">Message</label>
-            <textarea id="message" name="Message" placeholder="Tell us what you need…" required></textarea>
+            <textarea id="message" name="message" placeholder="Tell us what you need…" required></textarea>
           </div>
+
           <div class="buttons" style="margin-top:6px">
             <button type="submit" class="cta g-pill">Send message</button>
             <button type="reset" class="cta cta-outline">Clear</button>
           </div>
         </form>
+
+        <!-- If you later want reCAPTCHA, add data-netlify-recaptcha="true" on the form
+             and include <div data-netlify-recaptcha="true"></div> above the submit button. -->
       </div>
     </section>
 
@@ -152,7 +168,7 @@
     </section>
   </main>
 
- <footer id="contact">
+  <footer id="contact">
     <div class="container footer-grid">
       <div>
         <h3 class="g-text" style="margin-top:0">Say hello</h3>
@@ -162,14 +178,14 @@
           <a class="cta cta-outline" href="https://www.instagram.com/jddancee/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-        <div>
-          <h4 style="margin: 0.2rem 0">Visit us</h4>
-          <p class="muted">
-            Lockett St <br />
-            Manchester <br />
-            M8 8EF <br />
-          </p>
-        </div>
+      <div>
+        <h4 style="margin: 0.2rem 0">Visit us</h4>
+        <p class="muted">
+          Lockett St <br />
+          Manchester <br />
+          M8 8EF <br />
+        </p>
+      </div>
       <div>
         <h4 style="margin:.2rem 0">Links</h4>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px;">
