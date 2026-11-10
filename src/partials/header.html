@@ -1,0 +1,12 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">{{ image logo.png|JD Dance home||eager|110px }}</a>
+    <nav class="nav-desktop" aria-label="Primary"><ul>{{ navigation }}</ul></nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" hidden><span></span><span></span><span></span></button>
+  </div>
+</header>
+<dialog class="slide-menu" id="mobileMenu" aria-label="Navigation menu">
+  <button class="close-menu" id="closeMenu" type="button" aria-label="Close menu" autofocus>&times;</button>
+  <nav aria-label="Mobile"><ul>{{ navigation }}</ul></nav>
+</dialog>

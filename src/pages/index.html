@@ -1,0 +1,148 @@
+<!-- HERO -->
+      <section class="hero" id="about">
+        <div class="container wrap">
+          <div>
+            <h1>
+              Find your confidence <span class="g-text">through dance</span>.
+            </h1>
+            <p>
+              Affordable, high-quality classes for children and teens in
+              ballet, street, acro, commercial and more — in a safe, friendly
+              studio.
+            </p>
+
+          </div>
+
+          <div class="media">
+            <video
+              id="hero-video"
+              aria-label="Students dancing in studio"
+              muted
+              loop
+              playsinline
+              preload="none"
+              poster="assets/optimized/jddance-576.webp"
+            >
+              <source data-src="assets/optimized/hero.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button class="video-toggle" type="button" aria-controls="hero-video" aria-label="Play video" title="Play video" hidden>
+              <svg class="video-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+              <svg class="video-pause-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M6 5h4v14H6zm8 0h4v14h-4z" /></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCHOOL HIGHLIGHTS AND PARENT FEEDBACK -->
+      <section aria-label="Why families choose JD Dance">
+        <div class="container home-feedback">
+          <div>
+            <h2 class="g-text">Why JD Dance?</h2>
+            <ul class="service-list">
+              <li><strong>DBS checked teachers</strong><br>All teachers are DBS checked and have safeguarding training.</li>
+              <li><strong>Children &amp; teens</strong><br>From tiny dancers to teens — beginners welcome.</li>
+              <li><strong>Perform &amp; progress</strong><br>Build technique, confidence and friendships. Recitals &amp; events.</li>
+            </ul>
+          </div>
+          <div class="parent-feedback">
+            <h2 class="g-text">What parents say</h2>
+            <div class="quotes">
+              <blockquote class="quote">
+                <span class="quote-mark" aria-hidden="true">“</span>
+                <p>Lovely, friendly school. My daughter’s confidence has shot up!</p>
+              </blockquote>
+              <blockquote class="quote">
+                <span class="quote-mark" aria-hidden="true">“</span>
+                <p>Great value classes and brilliant teachers — highly recommend.</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED CLASSES -->
+      <section id="classes">
+        <div class="container">
+          <div class="section-head">
+            <h2>Classes we offer</h2>
+            <a class="cta cta-primary" href="classes.html">View all classes →</a>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              {{ image jddance01.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+              <div class="content">
+                <span class="badge g-pill">Ballet</span>
+                <h3>Grace & precision</h3>
+                <p>
+                  Build strong technique and musicality in a supportive class.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              {{ image jddance07.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+              <div class="content">
+                <span class="badge g-pill">Street</span>
+                <h3>Skill & attitude</h3>
+                <p>
+                  High-energy choreography with room to develop your own style.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              {{ image jddance02.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+              <div class="content">
+                <span class="badge g-pill">Acro / Commercial</span>
+                <h3>Strength & performance</h3>
+                <p>
+                  Improve flexibility, tricks and stage presence with fun
+                  combos.
+                </p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PRIVATE BOOKINGS -->
+      <section id="hire" aria-label="Private bookings">
+        <div class="container booking-banners">
+          <article class="booking-banner studio-banner">
+            <div class="booking-copy">
+              <div class="booking-heading">
+                <h2 class="g-text">Hire the studio</h2>
+                <p class="booking-price">From £25 per hour</p>
+              </div>
+              <p>Perfect for parties, baby showers, rehearsals and community events. One or two floors available.</p>
+              <a class="cta cta-primary g-pill" href="studiohire.html">Find out more<span class="sr-only"> about studio hire</span></a>
+            </div>
+            <div class="booking-image">
+              {{ image studio1.jpeg|Inside the JD Dance studio||lazy|(max-width: 700px) 92vw, 400px }}
+            </div>
+          </article>
+
+          <div class="occasion-cards">
+            <article class="occasion-card wedding-card">
+              <img class="occasion-image" src="assets/optimized/wedding-first-dance-640.webp" alt="A couple sharing their wedding first dance" width="640" height="427" loading="lazy" decoding="async">
+              <div class="booking-copy">
+                <h2>Wedding first dances</h2>
+                <p>Personalised first dance choreography for your wedding, from romantic and elegant to fun and full of surprises. No dance experience needed.</p>
+                <a class="cta cta-primary" href="Wedding-first-dance.html">Find out more<span class="sr-only"> about wedding first dances</span></a>
+              </div>
+            </article>
+
+            <article class="occasion-card hen-card">
+              <img class="occasion-image" src="assets/optimized/hen-parties-640.webp" alt="Dance hen party artwork in pink and green" width="640" height="427" loading="lazy" decoding="async">
+              <div class="booking-copy">
+                <h2>Dance hen parties</h2>
+                <p>A private dance party for you and your hens, with choreography to your chosen song or theme. All ages and dance abilities welcome.</p>
+                <a class="cta cta-primary" href="dance-hen-party.html">Find out more<span class="sr-only"> about dance hen parties</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>

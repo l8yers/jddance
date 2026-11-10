@@ -1,0 +1,52 @@
+{
+  "about": {
+    "title": "About \u2022 JD Dance \u2014 Salford",
+    "description": "About JD Dance \u2014 community dance classes in Salford & Manchester. Our story, values and team.",
+    "body_class": "page-interior accent-green page-about"
+  },
+  "classes": {
+    "title": "Schedule \u2022 JD Dance \u2014 Salford",
+    "description": "Classes and weekly schedule at JD Dance \u2014 Ballet, Street, Contemporary, Acro and more.",
+    "body_class": "page-interior page-classes"
+  },
+  "contact": {
+    "title": "Contact \u2022 JD Dance \u2014 Salford",
+    "description": "Contact JD Dance \u2014 ask about classes, the studio or bookings.",
+    "body_class": "page-interior page-contact"
+  },
+  "index": {
+    "title": "JD Dance \u2014 Salford",
+    "description": "JD Dance \u2014 welcoming dance classes for children and teens in Salford and Manchester, plus studio hire, wedding first dances and dance hen parties.",
+    "body_class": "page-home"
+  },
+  "studiohire": {
+    "title": "Studio Hire \u2022 JD Dance \u2014 Salford",
+    "description": "Hire the JD Dance studio for parties, rehearsals and community events.",
+    "body_class": "occasion-page page-interior accent-green"
+  },
+  "thanks": {
+    "title": "Thanks \u2022 JD Dance",
+    "description": "Thank you for contacting JD Dance.",
+    "body_class": "page-interior"
+  },
+  "Wedding-first-dance": {
+    "title": "Wedding First Dance \u2022 JD Dance \u2014 Salford",
+    "description": "Personalised wedding first dance choreography at JD Dance. Beginners welcome. Email us for prices and availability.",
+    "body_class": "occasion-page service-page"
+  },
+  "dance-hen-party": {
+    "title": "Dance Hen Parties \u2022 JD Dance \u2014 Salford",
+    "description": "Private dance hen parties with choreography to your chosen song or theme. Suitable for all abilities. Contact us for prices and availability.",
+    "body_class": "occasion-page service-page"
+  },
+  "privacy": {
+    "title": "Privacy notice \u2022 JD Dance",
+    "description": "How JD Dance handles website enquiries and personal information.",
+    "body_class": "page-interior"
+  },
+  "404": {
+    "title": "Page not found \u2022 JD Dance",
+    "description": "Find your way back to JD Dance classes, studio hire and dance parties.",
+    "body_class": "page-interior"
+  }
+}

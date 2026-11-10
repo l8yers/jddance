@@ -1,0 +1,446 @@
+{
+  "anna.jpeg": [
+    {
+      "src": "assets/optimized/anna-320.webp",
+      "width": 320,
+      "height": 320
+    },
+    {
+      "src": "assets/optimized/anna-400.webp",
+      "width": 400,
+      "height": 400
+    }
+  ],
+  "hen-parties.jpg": [
+    {
+      "src": "assets/optimized/hen-parties-320.webp",
+      "width": 320,
+      "height": 213
+    },
+    {
+      "src": "assets/optimized/hen-parties-640.webp",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "src": "assets/optimized/hen-parties-1200.webp",
+      "width": 1200,
+      "height": 800
+    }
+  ],
+  "jddance.jpg": [
+    {
+      "src": "assets/optimized/jddance-320.webp",
+      "width": 320,
+      "height": 569
+    },
+    {
+      "src": "assets/optimized/jddance-576.webp",
+      "width": 576,
+      "height": 1024
+    }
+  ],
+  "jddance01.jpeg": [
+    {
+      "src": "assets/optimized/jddance01-320.webp",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "src": "assets/optimized/jddance01-640.webp",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "src": "assets/optimized/jddance01-1200.webp",
+      "width": 1200,
+      "height": 900
+    }
+  ],
+  "jddance02.jpeg": [
+    {
+      "src": "assets/optimized/jddance02-320.webp",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "src": "assets/optimized/jddance02-640.webp",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "src": "assets/optimized/jddance02-1200.webp",
+      "width": 1200,
+      "height": 900
+    }
+  ],
+  "jddance03.jpeg": [
+    {
+      "src": "assets/optimized/jddance03-320.webp",
+      "width": 320,
+      "height": 281
+    },
+    {
+      "src": "assets/optimized/jddance03-640.webp",
+      "width": 640,
+      "height": 563
+    },
+    {
+      "src": "assets/optimized/jddance03-1198.webp",
+      "width": 1198,
+      "height": 1053
+    }
+  ],
+  "jddance04.jpeg": [
+    {
+      "src": "assets/optimized/jddance04-320.webp",
+      "width": 320,
+      "height": 196
+    },
+    {
+      "src": "assets/optimized/jddance04-640.webp",
+      "width": 640,
+      "height": 391
+    },
+    {
+      "src": "assets/optimized/jddance04-1200.webp",
+      "width": 1200,
+      "height": 734
+    }
+  ],
+  "jddance05.jpeg": [
+    {
+      "src": "assets/optimized/jddance05-320.webp",
+      "width": 320,
+      "height": 204
+    },
+    {
+      "src": "assets/optimized/jddance05-640.webp",
+      "width": 640,
+      "height": 408
+    },
+    {
+      "src": "assets/optimized/jddance05-903.webp",
+      "width": 903,
+      "height": 575
+    }
+  ],
+  "jddance06.jpeg": [
+    {
+      "src": "assets/optimized/jddance06-320.webp",
+      "width": 320,
+      "height": 199
+    },
+    {
+      "src": "assets/optimized/jddance06-640.webp",
+      "width": 640,
+      "height": 398
+    },
+    {
+      "src": "assets/optimized/jddance06-1200.webp",
+      "width": 1200,
+      "height": 746
+    }
+  ],
+  "jddance07.jpeg": [
+    {
+      "src": "assets/optimized/jddance07-320.webp",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "src": "assets/optimized/jddance07-640.webp",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "src": "assets/optimized/jddance07-1200.webp",
+      "width": 1200,
+      "height": 900
+    }
+  ],
+  "jddance08.jpeg": [
+    {
+      "src": "assets/optimized/jddance08-320.webp",
+      "width": 320,
+      "height": 371
+    },
+    {
+      "src": "assets/optimized/jddance08-640.webp",
+      "width": 640,
+      "height": 743
+    },
+    {
+      "src": "assets/optimized/jddance08-1114.webp",
+      "width": 1114,
+      "height": 1293
+    }
+  ],
+  "jddance09.jpeg": [
+    {
+      "src": "assets/optimized/jddance09-320.webp",
+      "width": 320,
+      "height": 313
+    },
+    {
+      "src": "assets/optimized/jddance09-640.webp",
+      "width": 640,
+      "height": 627
+    },
+    {
+      "src": "assets/optimized/jddance09-1200.webp",
+      "width": 1200,
+      "height": 1175
+    }
+  ],
+  "jddance10.jpeg": [
+    {
+      "src": "assets/optimized/jddance10-320.webp",
+      "width": 320,
+      "height": 390
+    },
+    {
+      "src": "assets/optimized/jddance10-640.webp",
+      "width": 640,
+      "height": 780
+    },
+    {
+      "src": "assets/optimized/jddance10-1200.webp",
+      "width": 1200,
+      "height": 1463
+    }
+  ],
+  "jddance11.jpeg": [
+    {
+      "src": "assets/optimized/jddance11-320.webp",
+      "width": 320,
+      "height": 276
+    },
+    {
+      "src": "assets/optimized/jddance11-640.webp",
+      "width": 640,
+      "height": 551
+    },
+    {
+      "src": "assets/optimized/jddance11-1200.webp",
+      "width": 1200,
+      "height": 1034
+    }
+  ],
+  "jddance12.jpeg": [
+    {
+      "src": "assets/optimized/jddance12-320.webp",
+      "width": 320,
+      "height": 419
+    },
+    {
+      "src": "assets/optimized/jddance12-640.webp",
+      "width": 640,
+      "height": 839
+    },
+    {
+      "src": "assets/optimized/jddance12-1169.webp",
+      "width": 1169,
+      "height": 1532
+    }
+  ],
+  "jddance13.jpeg": [
+    {
+      "src": "assets/optimized/jddance13-320.webp",
+      "width": 320,
+      "height": 244
+    },
+    {
+      "src": "assets/optimized/jddance13-640.webp",
+      "width": 640,
+      "height": 487
+    },
+    {
+      "src": "assets/optimized/jddance13-1200.webp",
+      "width": 1200,
+      "height": 914
+    }
+  ],
+  "jddance14.jpeg": [
+    {
+      "src": "assets/optimized/jddance14-320.webp",
+      "width": 320,
+      "height": 183
+    },
+    {
+      "src": "assets/optimized/jddance14-640.webp",
+      "width": 640,
+      "height": 365
+    },
+    {
+      "src": "assets/optimized/jddance14-1200.webp",
+      "width": 1200,
+      "height": 685
+    }
+  ],
+  "jddance15.jpeg": [
+    {
+      "src": "assets/optimized/jddance15-320.webp",
+      "width": 320,
+      "height": 297
+    },
+    {
+      "src": "assets/optimized/jddance15-640.webp",
+      "width": 640,
+      "height": 593
+    },
+    {
+      "src": "assets/optimized/jddance15-1125.webp",
+      "width": 1125,
+      "height": 1043
+    }
+  ],
+  "jddance16.jpeg": [
+    {
+      "src": "assets/optimized/jddance16-320.webp",
+      "width": 320,
+      "height": 302
+    },
+    {
+      "src": "assets/optimized/jddance16-640.webp",
+      "width": 640,
+      "height": 605
+    },
+    {
+      "src": "assets/optimized/jddance16-1200.webp",
+      "width": 1200,
+      "height": 1134
+    }
+  ],
+  "jenny.jpeg": [
+    {
+      "src": "assets/optimized/jenny-320.webp",
+      "width": 320,
+      "height": 317
+    },
+    {
+      "src": "assets/optimized/jenny-640.webp",
+      "width": 640,
+      "height": 634
+    },
+    {
+      "src": "assets/optimized/jenny-1200.webp",
+      "width": 1200,
+      "height": 1189
+    }
+  ],
+  "kate.jpeg": [
+    {
+      "src": "assets/optimized/kate-320.webp",
+      "width": 320,
+      "height": 326
+    },
+    {
+      "src": "assets/optimized/kate-640.webp",
+      "width": 640,
+      "height": 652
+    },
+    {
+      "src": "assets/optimized/kate-941.webp",
+      "width": 941,
+      "height": 958
+    }
+  ],
+  "kayleigh.jpeg": [
+    {
+      "src": "assets/optimized/kayleigh-320.webp",
+      "width": 320,
+      "height": 320
+    },
+    {
+      "src": "assets/optimized/kayleigh-400.webp",
+      "width": 400,
+      "height": 400
+    }
+  ],
+  "logo.png": [
+    {
+      "src": "assets/optimized/logo-128.webp",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "src": "assets/optimized/logo-256.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "src": "assets/optimized/logo-640.webp",
+      "width": 640,
+      "height": 640
+    }
+  ],
+  "studio.png": [
+    {
+      "src": "assets/optimized/studio-320.webp",
+      "width": 320,
+      "height": 289
+    },
+    {
+      "src": "assets/optimized/studio-640.webp",
+      "width": 640,
+      "height": 578
+    },
+    {
+      "src": "assets/optimized/studio-876.webp",
+      "width": 876,
+      "height": 791
+    }
+  ],
+  "studio1.jpeg": [
+    {
+      "src": "assets/optimized/studio1-320.webp",
+      "width": 320,
+      "height": 327
+    },
+    {
+      "src": "assets/optimized/studio1-640.webp",
+      "width": 640,
+      "height": 655
+    },
+    {
+      "src": "assets/optimized/studio1-1175.webp",
+      "width": 1175,
+      "height": 1202
+    }
+  ],
+  "studio2.jpeg": [
+    {
+      "src": "assets/optimized/studio2-320.webp",
+      "width": 320,
+      "height": 306
+    },
+    {
+      "src": "assets/optimized/studio2-640.webp",
+      "width": 640,
+      "height": 611
+    },
+    {
+      "src": "assets/optimized/studio2-1175.webp",
+      "width": 1175,
+      "height": 1122
+    }
+  ],
+  "wedding-first-dance.jpg": [
+    {
+      "src": "assets/optimized/wedding-first-dance-320.webp",
+      "width": 320,
+      "height": 213
+    },
+    {
+      "src": "assets/optimized/wedding-first-dance-640.webp",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "src": "assets/optimized/wedding-first-dance-1200.webp",
+      "width": 1200,
+      "height": 800
+    }
+  ]
+}

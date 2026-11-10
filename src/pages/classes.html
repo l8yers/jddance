@@ -1,0 +1,102 @@
+<!-- HERO -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <h1>Find your class. <span class="g-text">Start dancing.</span></h1>
+          <p class="lede">Ballet, Street, Contemporary, Acro, and more — welcoming beginners to experienced dancers. Browse class times and prices below, or download the weekly schedule.</p>
+        </div>
+        <div class="media">
+          {{ image jddance05.jpeg|Dancers at JD Dance|hero-photo|eager|(max-width: 900px) 92vw, 560px }}
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL TIMETABLE -->
+    <section id="full-schedule">
+      <div class="container">
+        <div class="section-head schedule-download">
+          <a class="cta cta-outline accent-green" href="assets/jd-schedule.pdf" download>Download PDF</a>
+        </div>
+
+        {{ timetable }}
+        <div class="class-information">
+          <h3 class="g-text accent-green">Good to know</h3>
+          <ul class="service-list">
+            <li>Payments can be made weekly or monthly.</li>
+            <li>Wear comfortable clothing and bring water.</li>
+            <li>Parents are welcome to sit in our waiting room.</li>
+            <li>Street parking is available.</li>
+          </ul>
+        </div>
+        <div class="schedule-action">
+          <div><h3 class="g-text">Class enquiries</h3><p>Contact us for availability or help choosing a class.</p></div>
+          <a class="cta cta-primary g-pill" href="contact.html?interest=Classes">Enquire about classes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR CLASSES -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2 class="g-text">Popular classes</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            {{ image jddance06.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+            <div class="content">
+              <span class="badge g-pill">Ballet</span>
+              <h3>Grace & precision</h3>
+              <p>Foundations, musicality and confidence for 3–7yrs and up.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            {{ image jddance07.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+            <div class="content">
+              <span class="badge g-pill">Street</span>
+              <h3>Skill & attitude</h3>
+              <p>High-energy choreography with space to find your style.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            {{ image jddance08.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+            <div class="content">
+              <span class="badge g-pill">Contemporary</span>
+              <h3>Flow & expression</h3>
+              <p>Develop control, creativity and performance quality.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            {{ image jddance09.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+            <div class="content">
+              <span class="badge g-pill">Acro</span>
+              <h3>Strength & flexibility</h3>
+              <p>Safely build technique for tricks and dynamic movement.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            {{ image jddance10.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+            <div class="content">
+              <span class="badge g-pill">Karate</span>
+              <h3>Discipline & focus</h3>
+              <p>Great cross-training for coordination and confidence.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            {{ image jddance11.jpeg|Dancers at JD Dance|img|lazy|(max-width: 900px) 92vw, 400px }}
+            <div class="content">
+              <span class="badge g-pill">Stretch & Conditioning</span>
+              <h3>Mobility & core</h3>
+              <p>Improve range of motion, alignment and injury prevention.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
